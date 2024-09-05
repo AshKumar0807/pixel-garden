@@ -35,6 +35,23 @@ nav {
     padding: 1rem 2rem;
 }
 
+.sketchfab-embed-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    /* Adjust this value to maintain the aspect ratio (e.g., 75% for a 4:3 aspect ratio) */
+    height: 0;
+    overflow: hidden;
+}
+
+.sketchfab-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .logo {
     font-size: 3rem;
     font-weight: bold;
