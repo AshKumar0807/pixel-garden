@@ -7,12 +7,13 @@
     <title>Virtual Herbal Garden</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">V</div>
+            <div class="logo">Pixel-Garden</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -31,40 +32,43 @@
 
     <main>
 
-        <section id="home" class="active">
-            <h1>Welcome to Virtual Herbal Garden</h1>
-            <p>The AYUSH sector relies heavily on medicinal plants and herbs, which form the backbone of traditional
-                healing practices. However, physical gardens are not accessible to everyone. A Virtual Herbal Garden
-                bridges the gap by offering a digital platform where users can explore, learn, and understand the
-                significance of various medicinal plants from the comfort of their homes.</p>
+        <section id="home" class="section active">
+            <div class="hero-section">
+                <h1>Welcome to Virtual Pixel Garden</h1>
+                <p>Experience the world of medicinal plants through our interactive digital platform. Explore, learn,
+                    and understand the significance of various medicinal plants from the comfort of your home.</p>
+                <a href="#plants" class="cta-button">Explore Plants</a>
+            </div>
 
-            <h2>Why Medicinal Plants Matter</h2>
-            <p>Medicinal plants have been used for thousands of years to promote health and treat illnesses. They are a
-                key component of many traditional medicine systems, including Ayurveda, Unani, Siddha, and Homeopathy.
-                These plants are known for their therapeutic properties and are often used in various forms such as
-                teas, tinctures, and extracts.</p>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h2>Why Medicinal Plants Matter</h2>
+                    <p>Medicinal plants have been used for thousands of years to promote health and treat illnesses.
+                        They are a key component of many traditional medicine systems, including Ayurveda, Unani,
+                        Siddha, and Homeopathy.</p>
+                </div>
 
-            <h2>Explore Our Virtual Garden</h2>
-            <p>Our virtual garden provides an interactive and immersive experience where you can:</p>
-            <ul>
-                <li><strong>Learn:</strong> Discover detailed information about a wide range of medicinal plants,
-                    including their uses, benefits, and growing conditions.</li>
-                <li><strong>Interact:</strong> Use our 3D model viewer to explore plants in a virtual space, seeing them
-                    up close and in 3D.</li>
-                <li><strong>Engage:</strong> Participate in virtual tours and educational modules to deepen your
-                    understanding of medicinal plants and traditional healing practices.</li>
-            </ul>
+                <div class="info-card">
+                    <h2>Explore Our Virtual Garden</h2>
+                    <ul>
+                        <li><strong>Learn:</strong> Discover detailed information about medicinal plants</li>
+                        <li><strong>Interact:</strong> Use our 3D model viewer to explore plants</li>
+                        <li><strong>Engage:</strong> Participate in virtual tours and educational modules</li>
+                    </ul>
+                </div>
 
-            <h2>Get Started</h2>
-            <p>To get started, navigate to the <a href="#plants">Plant Wiki</a> section to browse through our extensive
-                plant database. Use the search and filter options to find specific plants or categories that interest
-                you. Don't forget to check out our <a href="#virtual-garden">Virtual Garden</a> to experience the
-                interactive features we offer.</p>
+                <div class="info-card">
+                    <h2>Get Started</h2>
+                    <p>Navigate to the Plants section to browse through our extensive plant database. Use the search
+                        and filter options to find specific plants or categories that interest you.</p>
+                </div>
 
-            <h2>Join Our Community</h2>
-            <p>Stay connected and up-to-date with the latest developments in the world of medicinal plants by joining
-                our community. Follow us on social media, sign up for our newsletter, and participate in our forums to
-                connect with other enthusiasts and experts.</p>
+                <div class="info-card">
+                    <h2>Join Our Community</h2>
+                    <p>Stay connected and up-to-date with the latest developments in the world of medicinal plants. Join
+                        our community to connect with other enthusiasts and experts.</p>
+                </div>
+            </div>
         </section>
 
 
@@ -119,23 +123,27 @@
         </section>
 
         <section id="login">
-            <h2>Login</h2>
-            <form id="login-form">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
+            <div>
+                <form id="login-form" class="info-card" style="background-color: #e0eec6;">
+                    <h2 style="text-align: center;">Login</h2>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         </section>
 
         <section id="signup">
-            <h2>Sign Up</h2>
-            <form id="signup-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
+            <div>
+                <form id="signup-form" class="info-card" style="background-color: #e0eec6;">
+                    <h2>Sign Up</h2>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -144,6 +152,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="navigation.js"></script>
 </body>
 
 </html>

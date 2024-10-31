@@ -1,9 +1,9 @@
 :root {
-    --primary-green: #00684A;
-    --secondary-green: #00ED64;
-    --light-green: #E6F3EC;
-    --white: #FFFFFF;
-    --gray: #F9FBFA;
+    --primary-green: #243e36ff;
+    --secondary-green: #7ca982ff;
+    --light-green: #e0eec6ff;
+    --white: #f1f7edff;
+    --gray: #f1f7edff;
 }
 
 
@@ -16,13 +16,16 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #243e36ff;
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(36, 62, 54, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -39,7 +42,6 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%;
-    /* Adjust this value to maintain the aspect ratio (e.g., 75% for a 4:3 aspect ratio) */
     height: 0;
     overflow: hidden;
 }
@@ -91,7 +93,83 @@ nav {
     transition: all 0.3s ease;
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(36, 62, 54, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--light-green);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(36, 62, 54, 0.15);
+}
+
+.info-card h2 {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.info-card ul {
+    list-style-position: inside;
+    color: var(--primary-green);
+}
+
+.info-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.hero-section {
+    background-color: var(--light-green);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--primary-green);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-green);
+}
+
 main {
+    flex: 1 0 auto;
     padding-top: 80px;
 }
 
@@ -127,11 +205,10 @@ h3 {
     background-color: var(--white);
     border: 1px solid var(--primary-green);
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(36, 62, 54, 0.1);
     padding: 10px;
     width: 200px;
     z-index: 1;
-    /* Add a light green accent border */
     border: 2px solid var(--light-green);
 }
 
@@ -146,36 +223,35 @@ h3 {
 
 .filter-button {
     cursor: pointer;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-green);
     border-radius: 8px;
     padding: 10px;
     background-color: var(--light-green);
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(36, 62, 54, 0.1);
 }
 
 .filter-button:hover {
     background-color: var(--primary-green);
     color: var(--white);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px rgba(36, 62, 54, 0.15);
 }
 
 .filter-button i {
     margin-right: 8px;
 }
 
-/* Category filter styles */
 .category {
     cursor: pointer;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--primary-green);
     color: var(--primary-green);
 }
 
 .category:hover {
-    background-color: #f1f1f1;
+    background-color: var(--light-green);
 }
 
 .plant-grid {
@@ -238,19 +314,20 @@ footer {
     background-color: var(--primary-green);
     color: var(--white);
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     padding: 1rem;
+    flex-shrink: 0;
 }
 
-/* Three.js model viewer styling */
 #model-viewer {
     width: 100%;
     height: 500px;
-    /* Adjust height as needed */
     position: relative;
     overflow: hidden;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .nav-links {
         position: absolute;
